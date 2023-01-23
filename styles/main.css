@@ -1,0 +1,45 @@
+.timer {
+  display: flex;
+  user-select: none;
+  font-size: 75px;
+  font-weight: 300;
+  color: #364364;
+}
+
+.timer__item {
+  margin: 0 20px;
+  position: relative;
+  text-align: center;
+}
+
+.timer__item:not(:last-child)::after {
+  content: ":";
+  position: absolute;
+  right: -30px;
+}
+
+.timer__item::before {
+  font-size: 16px;
+  font-weight: 500;
+  color: #a9bcc5;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timer__days::before {
+  content: "дней";
+}
+
+.timer__hours::before {
+  content: "часов";
+}
+
+.timer__minutes::before {
+  content: "минут";
+}
+
+.timer__seconds::before {
+  content: "секунд";
+}
